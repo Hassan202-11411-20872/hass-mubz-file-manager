@@ -1,1 +1,182 @@
-
+/* Base Styles */
+:root {
+    --primary-color: #6c63ff;
+    --secondary-color: #4d44db;
+    --accent-color: #ff6584;
+    --light-color: #f8f9fa;
+    --dark-color: #343a40;
+    --success-color: #28a745;
+    --danger-color: #dc3545;
+    --warning-color: #ffc107;
+    --info-color: #17a2b8;
+    --border-radius: 8px;
+    --box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    --transition: all 0.3s ease;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f5f7ff;
+    color: #333;
+    line-height: 1.6;
+  }
+  
+  /* Header Styles */
+  .navbar-brand {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: var(--primary-color) !important;
+    letter-spacing: -0.5px;
+  }
+  
+  .navbar {
+    box-shadow: var(--box-shadow);
+    background-color: white !important;
+  }
+  
+  /* Card Styles */
+  .card {
+    border: none;
+    border-radius: var(--border-radius);
+    box-shadow: var(--box-shadow);
+    transition: var(--transition);
+    margin-bottom: 2rem;
+  }
+  
+  .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+  }
+  
+  .card-header {
+    background-color: white;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    font-weight: 600;
+    font-size: 1.25rem;
+    color: var(--primary-color);
+  }
+  
+  /* Button Styles */
+  .btn {
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-weight: 500;
+    transition: var(--transition);
+    border: none;
+  }
+  
+  .btn-primary {
+    background-color: var(--primary-color);
+  }
+  
+  .btn-primary:hover {
+    background-color: var(--secondary-color);
+    transform: translateY(-2px);
+  }
+  
+  .btn-success {
+    background-color: var(--success-color);
+  }
+  
+  .btn-danger {
+    background-color: var(--danger-color);
+  }
+  
+  .btn-sm {
+    padding: 5px 15px;
+    font-size: 0.85rem;
+  }
+  
+  /* Form Styles */
+  .form-control {
+    border-radius: var(--border-radius);
+    padding: 10px 15px;
+    border: 1px solid #e0e0e0;
+  }
+  
+  .form-control:focus {
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 0.2rem rgba(108, 99, 255, 0.25);
+  }
+  
+  .form-group label {
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  /* Table Styles */
+  .table {
+    margin-bottom: 0;
+  }
+  
+  .table thead th {
+    border-top: none;
+    border-bottom: 2px solid #dee2e6;
+    font-weight: 600;
+    color: var(--dark-color);
+  }
+  
+  .table-striped tbody tr:nth-of-type(odd) {
+    background-color: rgba(108, 99, 255, 0.03);
+  }
+  
+  /* Alert Styles */
+  .alert {
+    border-radius: var(--border-radius);
+    border: none;
+  }
+  
+  .alert-success {
+    background-color: rgba(40, 167, 69, 0.15);
+    color: var(--success-color);
+  }
+  
+  .alert-danger {
+    background-color: rgba(220, 53, 69, 0.15);
+    color: var(--danger-color);
+  }
+  
+  /* Dashboard Welcome */
+  .welcome-header {
+    position: relative;
+    padding-bottom: 15px;
+    margin-bottom: 30px;
+  }
+  
+  .welcome-header:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 4px;
+    background: var(--primary-color);
+    border-radius: 2px;
+  }
+  
+  /* Animation */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+  
+  .animated-card {
+    animation: fadeIn 0.6s ease forwards;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .card {
+      margin-bottom: 1.5rem;
+    }
+    
+    .table-responsive {
+      border: none;
+    }
+    
+    .btn {
+      display: block;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
